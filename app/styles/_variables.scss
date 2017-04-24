@@ -1,40 +1,49 @@
 //Переменные//
 //Шрифты//
-$harmoniaSansProCyr: "HarmoniaSansProCyr", "Arial", sans-serif;
-$HarmoniaSansProCyr-Black: "HarmoniaSansProCyr-Black", "Arial", sans-serif;
+$openSansRegular: "OpenSansRegular", "Arial", sans-serif;
+$openSansSemibold: "OpenSansSemibold", "Arial", sans-serif;
+$openSansBold: "OpenSansBold", "Arial", sans-serif;
 
 //Цвета, фон//
-$accent: #ff5912;
+$accent: #ff5b00;
 $accent-active: darken($accent, 20%);
-$gray-1: #34404b;
-$gray-2: #3c4751;
-$gray-3: #495662;
-$gray-4: #7c8791;
-$gray-5: #28313b;
+
+$black-1: #000000;
+$gray-1: #636363;
+$gray-2: #3b3b3b;
 
 
-
-
+$affair: #694a84;
 $blue-1: #3ab3ff;
-
 $red-1: #e12e3f;
 $green-1: #2fd967;
 
 $light-1: #ffffff;
+$light-2: #858585;
+$light-3: #a6a6a6;
 
 
 //background-colors:
 $bg-1: #fff;
-$bg-2: #6a7079;
+$bg-2: #f6f6f6;
+$bg-3: #ebebeb;
+$bg-4: rgba(30, 24, 53, 0.4);
+$bg-5: rgba(255, 255, 255, 0.24);
+$bg-6: #959595;
 
 
+$bg-image-1: linear-gradient(270deg, #9229a3 0%, #ff6400 100%);
+$bg-image-2: linear-gradient(to right, #ff003c 0%, #9229a3 100%);
+$bg-image-2-hover: linear-gradient(to right, darken(#ff003c, 10%) 0%, darken(#9229a3, 10%) 100%);
+$bg-image-3: linear-gradient(to right, #ff003c 0%, #9229a3 100%), linear-gradient(-75deg, #9229a3 0%, #ff003c 100%);
+$bg-image-4: linear-gradient(to top, white 0%, #f0f0f0 100%);
 //shadows, borders, rgba, other
-$border-1: rgba(230, 235, 235, .5);
-
+$box-shadow-1: 0 5px 5.6px 0.4px rgba(194, 23, 118, 0.16);
+$border-1: 5px solid rgba(0, 0, 0, 0.07);
 
 //размер шрифта//
 $font-size-base: 16px;
-$line-height-base: 24px/$font-size-base;
+$line-height-base: 22px/$font-size-base;
 
 $font-size-desktop: 16px;
 $font-size-laptop: 15px;
@@ -55,7 +64,7 @@ $tablet-point-widths-des: "(max-width: 768px)";
 $phone-point-widths-des: "(max-width: 576px)";
 
 //макс-ширина на устройствах//
-$desktop-max-widths: 1170px;
+$desktop-max-widths: 1140px;
 $laptop-max-widths: 992px;
 $tablet-max-widths: 768px;
 $phone-max-widths: 480px;

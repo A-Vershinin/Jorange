@@ -152,10 +152,10 @@
 }
 //контейнер резиновый rem
 @mixin container-fluid() {
-  max-width: $desktop-max-widths; //1200
+  max-width: $desktop-max-widths; //1170
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 1.25%; //30
+  padding: 0 1.22%; //15
   @media screen and #{($laptop-point-widths-des)}{
     max-width: $laptop-max-widths;
   }
