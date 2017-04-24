@@ -1,0 +1,34 @@
+.header {
+  position: relative;
+  color: $gray-1;
+  background-color: #599111;
+}
+.header__top {
+  padding: rem(20px) 0;
+  text-align: center;
+  color: #fff;
+}
+
+
+.header__logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12.5%;
+  width: rem(120px);
+  margin-right: 2.55%;
+
+}
+
+
+
+@media screen and #{($laptop-point-widths-des)}{
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}
+@media screen and (max-width: 480px) {
+}

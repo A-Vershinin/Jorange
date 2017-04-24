@@ -1,0 +1,15 @@
+{
+  "name": "yeoman-project",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "normalize-css": "^5.0.0",
+    "picturefill": "^3.0.2",
+    "jquery": "^3.1.1",
+    "css-hamburgers": "^0.8.1"
+  }
+}

@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+  background-color: #599111;
+}
+
+.footer__copyright {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+
+@media screen and #{($desktop-point-widths-des)} {
+
+}
+@media screen and #{($laptop-point-widths-des)} {
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}
