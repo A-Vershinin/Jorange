@@ -19,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
       var action = $(".header__action");
       menuHam.on("click", function(e) {
         menuHam.toggleClass("is-active");
-        menu.toggleClass("menu__list--mobile");
-        action.toggleClass("header__action--mobile");
+        // menu.toggleClass("menu__list--mobile");
+        // menu.slideToggle();
+        // action.toggleClass("header__action--mobile");
       });
     }
 

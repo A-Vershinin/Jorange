@@ -1,14 +1,48 @@
+nav.navbar.menu
+  .container
+    .navbar-header
+      //- button(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+      //-   aria-expanded="false").navbar-toggle.collapsed
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      button(type="button" aria-label="Menu" aria-controls="navigation" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1").collapsed.hamburger.menu__hamburger.hamburger--collapse
+        span.hamburger-box
+          span.hamburger-inner
 
-nav.menu
-  button(type="button" aria-label="Menu" aria-controls="navigation").hamburger.menu__hamburger.hamburger--collapse
-      span.hamburger-box
-        span.hamburger-inner
-  ul.menu__list
-    - var items = ["О компании", "Услуги", "Технологии", "Схема работы", "Преимущества", "Отзывы", "Контакты"]
-    each menu in items
-      if menu == "Преимущества"
+    .collapse.navbar-collapse.menu__collapse#bs-example-navbar-collapse-1
+      ul.nav.navbar-nav.menu__list
+        li.menu__item.active
+          a(href="#").menu__link О компании
         li.menu__item
-          a(href="#").menu__link.menu__link--active=menu
-      else
+          a(href="#").menu__link Услуги
         li.menu__item
-          a(href="#").menu__link=menu
+          a(href="#").menu__link Технологии
+        li.menu__item
+          a(href="#").menu__link Схема работы
+        li.menu__item
+          a(href="#").menu__link Преимущества
+        li.menu__item
+          a(href="#").menu__link Отзывы
+
+    //- <!--.navbar-collapse -->
+  //- <!--.container-fluid -->
+
+
+
+
+//- nav.menu
+  //- button(type="button" aria-label="Menu" aria-controls="navigation").hamburger.menu__hamburger.hamburger--collapse
+  //-     span.hamburger-box
+  //-       span.hamburger-inner
+  //- ul.menu__list
+  //-   - var items = ["О компании", "Услуги", "Технологии", "Схема работы", "Преимущества", "Отзывы", "Контакты"]
+  //-   each menu in items
+  //-     if menu == "Преимущества"
+  //-       li.menu__item
+  //-         a(href="#").menu__link.menu__link--active=menu
+  //-     else
+  //-       li.menu__item
+  //-         a(href="#").menu__link=menu

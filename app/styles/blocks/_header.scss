@@ -3,7 +3,8 @@
   height: 100vh;
   color: $black-1;
   background-color: $bg-1;
-  background-color: #ccc;
+  // background-color: #ccc;
+  margin-bottom: 200px;
 }
 .header__top {
   background-color: $bg-1;
@@ -63,7 +64,7 @@
 .header__app {
   font-size: 0;
 };
-.header__app-link {
+.header__app .header__app-link {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -92,30 +93,43 @@
     color: $accent;
   }
 };
-.header__do-btn {
+.header__actions .header__do-btn {
   vertical-align: middle;
   height: 50px;
-  padding: 0 11px;
+  padding: 0 23px;
   font-size: 16px;
   line-height: 50px;
   font-family: $openSansSemibold;
   font-weight: 600;
+  text-transform: none;
   border-radius: 25px;
   background-color: #000;
   background-image: $bg-image-2;
   box-shadow: $box-shadow-1;
   border: 0;
+  // outline: 0;
+  &:focus {
+    outline: 0;
+  }
   & .fa {
     margin-right: 10px;
+    font-weight: 400;
   }
   &:hover, &:active {
     background-image: $bg-image-2-hover;
   }
 };
 .header__bottom {
-
+  position: relative;
 }
-
+.header__nav {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-4;
+}
 
 
 
@@ -130,7 +144,13 @@
 
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+  .header__nav {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    // background-color: transparent;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
 
