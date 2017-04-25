@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // console.log(document.documentElement);
     }
 
-
     toggleMenu();
     function toggleMenu() {
       var menuHam = $(".menu__hamburger");

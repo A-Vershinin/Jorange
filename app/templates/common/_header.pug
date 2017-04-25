@@ -1,28 +1,34 @@
 header.header
-  .container
     .header__top
-      .header__logo
-        .header__logo-img
-          include ../common/_logo
-        .header__logo-slogan Company Slogan
-      .header__actions
-        .header__tell
-          span +38 (067) 937 99 92
-          .header__app
-            a(href="#").header__app-link Viber
-            a(href="#").header__app-link WhatsUp
-        a(href="#").btn.header__do-btn
-          i(aria-hidden="true").fa.fa-plus-circle
-          |Заказать перевод
+      .container
+        .header__top-inner
+          .header__logo
+            .header__logo-img
+              include ../common/_logo
+            .header__logo-slogan Company Slogan
+          .header__actions
+            .header__tell
+              span +38 (067) 937 99 92
+              .header__app
+                a(href="tel:+380679379992").header__app-link Viber
+                a(href="tel:+380679379992").header__app-link WhatsUp
+            a(href="#").btn.header__do-btn
+              i(aria-hidden="true").fa.fa-plus-circle
+              |Заказать перевод
     .header__bottom
       ul.slider
         li.slider__item
-          .slider__block
+          .slider__promo
             h1.slider__title Будь со всем миром на одном языке!
             .slider__text Ищете квалифицированного переводчика?
-              |Тогда <span>наша компантия </span>- это то, что Вам нужно!
+              | Тогда <span>наша компантия </span>- это то, что Вам нужно!
             a(href="#").btn.slider__btn
-              i(aria-hidden="true").fa.fa-plus-circle
+              i(aria-hidden="true").fa.fa-play-circle
               |Как это работает?
+        .slider__arrows
+          a(href="#").slider__arrow.slider__arrow-prev
+            i(aria-hidden="true").fa.fa-angle-left
+          a(href="#").slider__arrow.slider__arrow-next
+            i(aria-hidden="true").fa.fa-angle-right
       .header__nav
         include ../common/_menu

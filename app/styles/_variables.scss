@@ -14,6 +14,7 @@ $gray-2: #3b3b3b;
 
 
 $affair: #694a84;
+$affair-hover:  darken($affair, 30%);
 $blue-1: #3ab3ff;
 $red-1: #e12e3f;
 $green-1: #2fd967;
@@ -34,11 +35,14 @@ $bg-6: #959595;
 
 $bg-image-1: linear-gradient(270deg, #9229a3 0%, #ff6400 100%);
 $bg-image-2: linear-gradient(to right, #ff003c 0%, #9229a3 100%);
-$bg-image-2-hover: linear-gradient(to right, darken(#ff003c, 10%) 0%, darken(#9229a3, 10%) 100%);
-$bg-image-3: linear-gradient(to right, #ff003c 0%, #9229a3 100%), linear-gradient(-75deg, #9229a3 0%, #ff003c 100%);
-$bg-image-4: linear-gradient(to top, white 0%, #f0f0f0 100%);
+$bg-image-2-hover: linear-gradient(to right, darken(#ff003c, 20%) 0%, darken(#9229a3, 20%) 100%);
+$bg-image-3: linear-gradient(270deg, #ff6000 0%, #ff7e00 100%);
+$bg-image-3-hover: linear-gradient(270deg, darken(#ff6000, 5%) 0%, darken(#ff7e00, 2%) 100%);
+$bg-image-4: linear-gradient(to right, #ff003c 0%, #9229a3 100%), linear-gradient(-75deg, #9229a3 0%, #ff003c 100%);
+$bg-image-5: linear-gradient(to top, white 0%, #f0f0f0 100%);
 //shadows, borders, rgba, other
 $box-shadow-1: 0 5px 5.6px 0.4px rgba(194, 23, 118, 0.16);
+$box-shadow-2: 0 5px 5.6px 0.4px rgba(168, 71, 0, 0.36);
 $border-1: 5px solid rgba(0, 0, 0, 0.07);
 
 //размер шрифта//

@@ -221,3 +221,6 @@
     color: $color;
   }
 }
+@media #{$retina} {
+  background-image: url("../img/bg/bg-slider1@2x.jpg");
+}

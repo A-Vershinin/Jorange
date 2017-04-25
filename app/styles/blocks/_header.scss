@@ -1,20 +1,24 @@
 .header {
   position: relative;
+  height: 100vh;
   color: $black-1;
+  background-color: $bg-1;
   background-color: #ccc;
 }
 .header__top {
-  min-height: 104px;
   background-color: $bg-1;
   border-bottom: 2px solid $affair;
+}
+.header__top-inner {
+  // min-height: 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 19px 0;
 }
-
 .header__logo {
   max-width: 450px;
-  width: calc((355/1140)*100%); //355
+  // width: calc((355/1140)*100%); //355
   & .logo {
     vertical-align: middle;
   }
@@ -22,8 +26,12 @@
 .header__logo-img {
   display: inline-block;
   vertical-align: middle;
-  padding: 0 4.5%; //18
+  // padding: 0 4.5%; //18
+  padding: 0 18px;
   box-sizing: border-box;
+  & svg {
+    background-image: $bg-image-1;
+  }
 }
 .header__logo-slogan {
   display: inline-block;
@@ -43,10 +51,47 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 1rem;
-  span {}
+  margin-right: 24px;
+  text-align: center;
+  span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $gray-2;
+  }
 };
-.header__app {};
-.header__app-link {};
+.header__app {
+  font-size: 0;
+};
+.header__app-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 7px;
+  font-size: 10px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $affair;
+  transition: .25s;
+  cursor: pointer;
+  &:first-child {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 30;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $affair;
+    }
+  }
+  &:hover, &:active {
+    color: $accent;
+  }
+};
 .header__do-btn {
   vertical-align: middle;
   height: 50px;
@@ -63,10 +108,13 @@
   & .fa {
     margin-right: 10px;
   }
-  &:hover {
+  &:hover, &:active {
     background-image: $bg-image-2-hover;
   }
 };
+.header__bottom {
+
+}
 
 
 

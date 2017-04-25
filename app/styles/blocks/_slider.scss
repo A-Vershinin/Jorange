@@ -1,0 +1,126 @@
+.slider {
+	position: relative;
+	@extend %ul-reset;
+}
+.slider__item {
+	position: relative;
+	min-height: 789px;
+	background-image: url("../img/bg/header-bg@1x.jpg");
+	@extend %cover;
+	@media #{$retina} {
+		background-image: url("../img/bg/header-bg@2x.jpg");
+	}
+}
+.slider__promo {
+	max-width: 540px;
+	position: absolute;
+	z-index: 30;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $light-1;
+	text-align: center;
+}
+.slider__title {
+	position: relative;
+	margin-bottom: 50px;
+	font-size: 52px;
+	line-height: 1;
+	font-family: $openSansBold;
+	font-weight: 700;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -23px;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 120px;
+		height: 2px;
+		margin: 0 auto;
+		background-color: $bg-1;
+	}
+}
+.slider__text {
+	max-width: 380px;
+	margin: 0 auto 66px;
+	font-size: 16px;
+	line-height: 22px;
+	font-family: $openSansRegular;
+	font-weight: 400;
+	span {
+		font-weight: 700;
+	}
+}
+.slider__btn {
+	height: 52px;
+	padding: 0 22px;
+	font-size: 18px;
+	line-height: 52px;
+	text-transform: none;
+	background-color: $accent;
+	background-image: $bg-image-3;
+	box-shadow: $box-shadow-2;
+	border-color: transparent;
+	border-radius: 26px;
+	& .fa {
+		margin-right: 10px;
+		font-weight: 600;
+	}
+	&:hover {
+		background-color: $accent-active;
+		background-image: $bg-image-3-hover;
+	}
+}
+.slider__arrows {
+	width: 100%;
+	position: absolute;
+	z-index: 50;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.slider__arrow {
+	position: absolute;
+	z-index: 30;
+	display: inline-block;
+	vertical-align: middle;
+	width: 62px;
+	height: 62px;
+	text-decoration: none;
+	font-size: 34px;
+	line-height: 1;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.24);
+	border: 5px solid rgba(0, 0, 0, 0.07);
+	border-radius: 50%;
+	transition: .35s;
+	cursor: pointer;
+	&.slider__arrow-prev {
+		left: 0;
+	}
+	&.slider__arrow-next {
+		right: 0;
+	}
+	&:hover, &:active {
+		background-color: rgba(255, 255, 255, .6);
+	}
+	.fa {
+		position: absolute;
+		z-index: 50;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+@media screen and #{($laptop-point-widths-des)}{
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}
