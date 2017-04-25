@@ -11,6 +11,7 @@ $accent-active: darken($accent, 20%);
 $black-1: #000000;
 $gray-1: #636363;
 $gray-2: #3b3b3b;
+$gray-3: #212121;
 
 
 $affair: #694a84;
@@ -40,6 +41,7 @@ $bg-image-3: linear-gradient(270deg, #ff6000 0%, #ff7e00 100%);
 $bg-image-3-hover: linear-gradient(270deg, darken(#ff6000, 5%) 0%, darken(#ff7e00, 2%) 100%);
 $bg-image-4: linear-gradient(to right, #ff003c 0%, #9229a3 100%), linear-gradient(-75deg, #9229a3 0%, #ff003c 100%);
 $bg-image-5: linear-gradient(to top, white 0%, #f0f0f0 100%);
+
 //shadows, borders, rgba, other
 $box-shadow-1: 0 5px 5.6px 0.4px rgba(194, 23, 118, 0.16);
 $box-shadow-2: 0 5px 5.6px 0.4px rgba(168, 71, 0, 0.36);
@@ -68,7 +70,7 @@ $tablet-point-widths-des: "(max-width: 768px)";
 $phone-point-widths-des: "(max-width: 576px)";
 
 //макс-ширина на устройствах//
-$desktop-max-widths: 1140px;
+$desktop-max-widths: 1170px;
 $laptop-max-widths: 992px;
 $tablet-max-widths: 768px;
 $phone-max-widths: 480px;

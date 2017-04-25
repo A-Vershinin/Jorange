@@ -4,7 +4,6 @@
   color: $black-1;
   background-color: $bg-1;
   // background-color: #ccc;
-  margin-bottom: 200px;
 }
 .header__top {
   background-color: $bg-1;
@@ -27,8 +26,7 @@
 .header__logo-img {
   display: inline-block;
   vertical-align: middle;
-  // padding: 0 4.5%; //18
-  padding: 0 18px;
+  padding: 0 18px; //4.5%
   box-sizing: border-box;
   & svg {
     background-image: $bg-image-1;
@@ -76,6 +74,10 @@
   color: $affair;
   transition: .25s;
   cursor: pointer;
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
   &:first-child {
     &::after {
       content: "";
@@ -103,11 +105,12 @@
   font-weight: 600;
   text-transform: none;
   border-radius: 25px;
+  color: $light-1;
   background-color: #000;
   background-image: $bg-image-2;
   box-shadow: $box-shadow-1;
   border: 0;
-  // outline: 0;
+  outline: 0;
   &:focus {
     outline: 0;
   }
@@ -132,14 +135,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media screen and #{($laptop-point-widths-des)}{
 
 }
@@ -149,7 +144,7 @@
     left: auto;
     right: auto;
     bottom: auto;
-    // background-color: transparent;
+    background-color: transparent;
   }
 }
 @media screen and #{($phone-point-widths-des)} {
