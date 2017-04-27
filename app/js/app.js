@@ -85,6 +85,63 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    feedbacklider();
+    function feedbacklider() {
+      var carousel = $('.feedback__slide-list').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        nav: true,
+        navigation: true,
+        dots: false,
+        autoWidth: true,
+        // autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2500,
+        autoplayTimeout: 5000,
+        navSpeed: 2500,
+        smartSpeed: 2500,
+        fluidSpeed: 1500,
+        lazyLoad: true,
+        navigationText : ["",""],
+        responsiveClass: true,
+        navText: "",
+        animateOut: 'slideOutDown',
+        animateIn: 'fadeInDown',
+        responsive:{
+          0: {
+            items: 1,
+            nav: false
+          },
+          650: {
+            items: 1,
+            nav: false
+          },
+          768: {
+            items: 1,
+            nav: true
+          },
+          992: {
+            items: 1,
+            nav: true
+          },
+          1200: {
+            items: 1,
+            nav: true
+          }
+        }
+      });
+      $('.feedback__slide-arrow--prev').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('prev.owl.carousel');
+      });
+
+      $('.feedback__slide-arrow--next').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('next.owl.carousel');
+      });
+    }
+
 
     // btn Up
     scrollUp();
