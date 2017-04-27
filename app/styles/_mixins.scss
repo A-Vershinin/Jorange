@@ -112,6 +112,11 @@
   // @return $px/$font-size-base + 0rem;
   @return ($px/$font-size-base) * 1rem;
 }
+//перевод в %
+@function inter($width, $parent) {
+  // @return $px/$font-size-base + 0rem;
+  @return ($width/$parent) * 100%;
+}
 
 //пример ретины
 @media #{$retina} {
