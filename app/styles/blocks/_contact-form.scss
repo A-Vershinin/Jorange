@@ -21,7 +21,7 @@
   width: 100%;
   height: rem(40px);
   margin-bottom: rem(20px);
-  padding: 0 rem(18px);
+  padding: 0 rem(20px);
   font-size: rem(16px);
   line-height: 1;
   font-family: $openSansRegular;
@@ -58,22 +58,22 @@
   padding: rem(15px) rem(20px);
   resize: none;
 }
-.contact-form__btn {
-  display: block;
-  width: 100%;
-  padding: 0 rem(10px);
-  color: $gray-1;
-  background-color: $accent;
-  font-size: rem(13px);
-  line-height: rem(40px);
-  font-family: $openSansRegular;
-  font-weight: 400;
-  text-align: center;
-  border: none;
-  &:hover {
-    background-color: $accent-active;
-  }
-}
+// .contact-form__btn {
+//   display: block;
+//   width: 100%;
+//   padding: 0 rem(10px);
+//   color: $gray-1;
+//   background-color: $accent;
+//   font-size: rem(13px);
+//   line-height: rem(40px);
+//   font-family: $openSansRegular;
+//   font-weight: 400;
+//   text-align: center;
+//   border: none;
+//   &:hover {
+//     background-color: $accent-active;
+//   }
+// }
 
 @media screen and #{($laptop-point-widths-des)} {
 

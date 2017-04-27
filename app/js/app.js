@@ -108,28 +108,18 @@ document.addEventListener("DOMContentLoaded", function() {
         navText: "",
         animateOut: 'slideOutDown',
         animateIn: 'fadeInDown',
-        responsive:{
-          0: {
-            items: 1,
-            nav: false
-          },
-          650: {
-            items: 1,
-            nav: false
-          },
-          768: {
-            items: 1,
-            nav: true
-          },
-          992: {
-            items: 1,
-            nav: true
-          },
-          1200: {
-            items: 1,
-            nav: true
-          }
-        }
+        itemsDesktop: [
+            1200, 3
+        ],
+        itemsDesktopSmall: [
+            992, 1
+        ],
+        itemsTablet: [
+            768, 1
+        ],
+        itemsMobile: [
+            576, 1
+        ],
       });
       $('.feedback__slide-arrow--prev').click(function(e) {
         e.preventDefault();
@@ -142,7 +132,32 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    selectForm();
+    function selectForm() {
+      $('.select').on('click','.select__title',function() {
+        var parent = $(this).closest('.select');
+        if (!parent.hasClass('is-open')) {
+          parent.addClass('is-open');
+          $('.select.is-open').not(parent).removeClass('is-open');
+        }else {
+          parent.removeClass('is-open');
+        }
+      }).on('click','ul>li',function() {
+        var parent = $(this).closest('.select');
+        parent.removeClass('is-open').find('.select__title').text($(this).text());
+        parent.find('input[type=hidden]').attr('value', $(this).attr('data-value'));
+      });
+    }
+    //inputFile
+    inputFile();
+    function inputFile() {
+      $('#file-field').change(function() {
+      if ($(this).val() != '') $(this).prev()
+        .text('Выбрано файлов: ' + $(this)[0].files.length);
+      else $(this).prev().text('Выберите файлы');
+      });
 
+    }
     // btn Up
     scrollUp();
     function scrollUp() {

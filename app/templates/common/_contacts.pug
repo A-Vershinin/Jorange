@@ -1,0 +1,93 @@
+section.contacts
+	.container
+		h2.contacts__title Контакты
+		.contacts__time
+			span Мы работаем:
+			| с 9.00 до 19.00(пн.-сб.) Заявки принимаем и обрабатываем в режиме 24/7
+		.contacts__ways
+			ul.contacts__ways-list
+				li.contacts__ways-item
+					h5.contacts__ways-item-title
+						i(aria-hidden="true").fa.fa-phone
+						|Контактные данные:
+					a(href="tel:+380509379992").contacts__ways-link +38 (050) 937-99-92
+					a(href="tel:+380579379992").contacts__ways-link +38 (050) 937-99-92
+				li.contacts__ways-item
+					h5.contacts__ways-item-title
+						i(aria-hidden="true").fa.fa-envelope
+						|Електронная почта:
+					a(href="mailto:zakaz@gmail.com").contacts__ways-link zakaz@gmail.com (для заказов)
+					a(href="mailto:perevod@gmail.com").contacts__ways-link perevod@gmail.com (для резюме)
+					a(href="mailto:ol@mail.ru").contacts__ways-link ol@mail.ru (для общих вопросов)
+				li.contacts__ways-item
+					h5.contacts__ways-item-title
+						i(aria-hidden="true").fa.fa-skype
+						|Skype:
+					a(href="skype:translate_me?chat").contacts__ways-link Translate_me
+		form.contacts__form#contacts__form
+			h3.contacts__form-title Заказать перевод
+			.contacts__form-title-desc *Обязательные для заполнения поля
+			.contacts__form-block
+				.contacts__form-group
+					.contacts__form-group-inner
+						input(type="text" name="name" placeholder="Ваше имя*"
+							value="" required).contacts__form-input#name-field
+						label(for="name-field") Имя
+					.contacts__form-group-inner
+						input(type="text" name="phone" placeholder="Контактный телефон*"
+							value="" required).contacts__form-input#phone-field
+						label(for="name-field") Контактный телефон
+				.contacts__form-group
+					input(type="email" name="email" placeholder="Email*"
+						value="" required).contacts__form-input#email-field
+					label(for="name-field") Email
+				.contacts__form-line
+				.contacts__form-group
+					.contacts__form-group-inner
+						.select.contacts__form-select
+							.select__arrow.contacts__form-select-arrow
+							.select__arrow.contacts__form-select-arrow
+							.select__title.contacts__form-select-title Язык оригинала
+							ul.select__list.contacts__form-select-list
+								li(data-value="ru").select__item Русский
+								li(data-value="eng").select__item Анлийский
+								li(data-value="ger").select__item Немецкий
+								li(data-value="chine").select__item Китайский
+								li(data-value="chine").select__item Канадский
+								li(data-value="chine").select__item Испанский
+							input(type="hidden" name="changeme").select__change
+					.contacts__form-group-inner
+						.select.contacts__form-select
+							.select__arrow.contacts__form-select-arrow
+							.select__arrow.contacts__form-select-arrow
+							.select__title.contacts__form-select-title Язык перевода
+							ul.select__list.contacts__form-select-list
+								li(data-value="ru").select__item Русский
+								li(data-value="eng").select__item Анлийский
+								li(data-value="ger").select__item Немецкий
+								li(data-value="chine").select__item Китайский
+								li(data-value="chine").select__item Канадский
+								li(data-value="chine").select__item Испанский
+							input(type="hidden" name="changeme").select__change
+				.contacts__form-group
+					.select.contacts__form-select
+						.select__arrow.contacts__form-select-arrow
+						.select__arrow.contacts__form-select-arrow
+						.select__title.contacts__form-select-title Тематика
+						ul.select__list.contacts__form-select-list
+							li(data-value="ru").select__item Кино
+							li(data-value="eng").select__item Музыка
+							li(data-value="ger").select__item Видео
+							li(data-value="chine").select__item Литература
+						input(type="hidden" name="changeme").select__change
+				.contacts__form-group
+					textarea(type="text" name="message" placeholder="Комментарий*"
+						value="" required).contacts__form-textarea#textarea-field
+					label(for="select-field") Комментарий
+				.contacts__form-group.contacts__form-group--file
+					label(for="file-field")
+						i(aria-hidden="true").fa.fa-paperclip
+						|Прикрепить документ
+					input(type="file" name="file"
+						multiple).contacts__form-input.contacts__form-input-file#file-field
+				button(type="submit" tabindex="4").btn.contact-form__btn Отправить
