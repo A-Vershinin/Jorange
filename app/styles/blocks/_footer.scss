@@ -9,7 +9,6 @@
   padding-top: 54px;
   padding-bottom: 14px;
   margin-left: inter(97, 1140); //97
-  background-color: #d5e0c3;
 }
 .footer__left-col {
   float: left;
@@ -26,7 +25,6 @@
   font-family: $openSansRegular;
   font-weight: 400;
   color: #595959;
-  // background-color: #ccc;
 }
 .footer__menu-title {
   margin-bottom: 27px;
@@ -70,8 +68,8 @@
   background-color: #ebebeb;
 }
 .footer-logo {
-  margin-top: 30px;
-  margin-bottom: 86px;
+  margin-top: 31px;
+  margin-bottom: 30px;
   .logo {
     display: block;
     max-width: 100%;
@@ -85,12 +83,41 @@
     }
   }
 }
+.footer__socials {
+  margin-bottom: 22px;
+  .socials {
+    text-align: center;
+  }
+  .socials__item {
+    margin: 0 5px;
+  }
+  .socials__link {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: $bg-6;
+    svg {
+      fill: $light-1;
+    }
+    &:hover {
+      background-color: $accent;
+      svg {
+        fill: $light-1;
+      }
+    }
+    &:active {
+      background-color: $accent-active;
+    }
+  }
+}
 .footer-logo__desc {
   margin-bottom: 30px;
+  margin-bottom: 38px;
   padding: 0 98px;
   text-align: center;
   color: $gray-1;
   font-size: 12px;
+  line-height: 16px;
   font-family: $openSansRegular;
   font-weight: 400;
   span {

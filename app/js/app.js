@@ -27,7 +27,60 @@ document.addEventListener("DOMContentLoaded", function() {
         // action.toggleClass("header__action--mobile");
       });
     }
+    headerSlider();
+    function headerSlider() {
+      var carousel = $('.slider').owlCarousel({
+        items: 1,
+        loop: true,
+        center: true,
+        margin: 10,
+        nav: true,
+        navigation: true,
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 1500,
+        autoplayTimeout: 5000,
+        navSpeed: 1500,
+        smartSpeed: 1500,
+        fluidSpeed: 1500,
+        lazyLoad: true,
+        navigationText : ["",""],
+        responsiveClass: true,
+        navText: "",
+        responsive:{
+          0: {
+            items: 1,
+            nav: false
+          },
+          650: {
+            items: 1,
+            nav: false
+          },
+          768: {
+            items: 1,
+            nav: true
+          },
+          992: {
+            items: 1,
+            nav: true
+          },
+          1200: {
+            items: 1,
+            nav: true
+          }
+        }
+      });
+      $('.slider__arrow-prev').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('prev.owl.carousel');
+      });
 
+      $('.slider__arrow-next').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('next.owl.carousel');
+      });
+    }
     workSlider();
     function workSlider() {
       var carousel = $('.work__slide-list').owlCarousel({
@@ -37,8 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nav: true,
         navigation: true,
         dots: false,
-        autoWidth: true,
-        // autoplay: true,
+        autoplay: true,
         autoplayHoverPause: true,
         autoplaySpeed: 2500,
         autoplayTimeout: 5000,
@@ -94,8 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nav: true,
         navigation: true,
         dots: false,
-        autoWidth: true,
-        // autoplay: true,
+        autoplay: true,
         autoplayHoverPause: true,
         autoplaySpeed: 2500,
         autoplayTimeout: 5000,

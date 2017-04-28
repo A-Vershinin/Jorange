@@ -1,16 +1,18 @@
 .header {
   position: relative;
-  height: 100vh;
   color: $black-1;
   background-color: $bg-1;
-  // background-color: #ccc;
 }
 .header__top {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  width: 100%;
+  height: 104px;
   background-color: $bg-1;
   border-bottom: 2px solid $affair;
 }
 .header__top-inner {
-  // min-height: 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,8 +124,22 @@
     background-image: $bg-image-2-hover;
   }
 };
-.header__bottom {
+.header__slider {
   position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a17290;
+    background-image: url("../img/bg/header-bg@1x.jpg");
+    @media #{$retina} {
+      background-image: url("../img/bg/header-bg@2x.jpg");
+    }
+    @extend %cover;
+  }
 }
 .header__nav {
   position: absolute;

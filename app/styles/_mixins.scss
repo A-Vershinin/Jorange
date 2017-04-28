@@ -161,7 +161,8 @@
   min-width: 320px;
   width: auto;
   margin: 0 auto;
-  padding: 0 1.22%; //15
+  padding: 0 1.25%; //15
+  // padding: 0 inter(15, 1170);
   @media screen and #{($laptop-point-widths-des)}{
     max-width: $laptop-max-widths;
   }

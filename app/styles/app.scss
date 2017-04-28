@@ -12,7 +12,7 @@
 
 //Стили widgets//
 // @import "widgets/_fancybox.scss";
-// @import "widgets/_owlCarousel.scss";
+@import "widgets/_owlCarousel.scss";
 // @import "widgets/_slick.scss";
 
 //Стили BEM-блоков//
@@ -30,6 +30,7 @@
 @import "blocks/_work.scss";
 @import "blocks/_feedback.scss";
 @import "blocks/_contacts.scss";
+@import "blocks/_widget-lang.scss";
 @import "blocks/_socials.scss";
 @import "blocks/_select.scss";
 @import "blocks/_content.scss";

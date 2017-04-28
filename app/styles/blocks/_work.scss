@@ -143,26 +143,62 @@
 	line-height: 22px;
 	font-family: $openSansRegular;
 	font-weight: 400;
+	border-bottom: 1px solid #d9d9d9;
 	box-shadow: 0 16px 42px 0px rgba(0,0,0,.14),
 	0px 5px 8px 1px rgba(0, 0, 0, 0.1);
 }
 .work__slide-item-left {
-	position: relative;
-	width: 715px;
-	float: left;
-	padding-left: 97px;
 	padding-right: 49px;
+	padding-right: 487px;
+	padding-left: 97px;
 	padding-top: 63px;
 	padding-bottom: 63px;
 	text-align: left;
 	background-color: $bg-1;
 }
-.work__slide-item-right {
+.work__slide-item-image {
 	width: 424px;
-	float: right;
+	min-height: 304px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 30;
+	font-size: 0;
+	@extend %cover;
+	&--one {
+		background-image: url("../img/content/step1@1x.jpg");
+		@media #{$retina} {
+			background-image: url("../img/content/step1@2x.jpg");
+		}
+	}
+	&--two {
+		background-image: url("../img/content/step2@1x.jpg");
+		@media #{$retina} {
+			background-image: url("../img/content/step2@2x.jpg");
+		}
+	}
+	&--three {
+		background-image: url("../img/content/step3@1x.jpg");
+		@media #{$retina} {
+			background-image: url("../img/content/step3@2x.jpg");
+		}
+	}
+	&--four {
+		background-image: url("../img/content/step4@1x.jpg");
+		@media #{$retina} {
+			background-image: url("../img/content/step4@2x.jpg");
+		}
+	}
+	&--five {
+		background-image: url("../img/content/step5@1x.jpg");
+		@media #{$retina} {
+			background-image: url("../img/content/step5@2x.jpg");
+		}
+	}
 }
 .work__slide-item-title {
-	margin-bottom: 30px;
+	margin-bottom: 34px;
 	font-size: 22px;
 	line-height: 1;
 	font-family: $openSansBold;
@@ -173,7 +209,7 @@
 	position: absolute;
 	z-index: 30;
 	top: 60px;
-	right: 50px;
+	right: 490px;
 	font-size: 16px;
 	line-height: 22px;
 	font-family: $openSansBold;

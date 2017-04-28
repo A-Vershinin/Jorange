@@ -15,20 +15,31 @@ header.header
             a(href="#").btn.header__do-btn
               i(aria-hidden="true").fa.fa-plus-circle
               |Заказать перевод
-    .header__bottom
-      ul.slider
-        li.slider__item
-          .slider__promo
-            h1.slider__title Будь со всем миром на одном языке!
-            .slider__text Ищете квалифицированного переводчика?
-              | Тогда <span>наша компантия </span>- это то, что Вам нужно!
-            a(href="#").btn.slider__btn
-              i(aria-hidden="true").fa.fa-play-circle
-              |Как это работает?
+
+    .header__slider
+      .container
+        .slider.owl-carousel
+          .slider__item
+            .slider__promo
+              h1.slider__title Будь со всем миром на одном языке!
+              .slider__text Ищете квалифицированного переводчика?
+                | Тогда <span>наша компантия </span>- это то, что Вам нужно!
+              a(href="#").btn.slider__btn
+                i(aria-hidden="true").fa.fa-play-circle
+                |Как это работает?
+          .slider__item
+              .slider__promo
+                h1.slider__title Открой для себя новые миры!
+                .slider__text Ищете квалифицированного переводчика?
+                  | Тогда <span>наша компантия </span>- это то, что Вам нужно!
+                a(href="#").btn.slider__btn
+                  i(aria-hidden="true").fa.fa-play-circle
+                  |Как это работает?
         .slider__arrows
           a(href="#").slider__arrow.slider__arrow-prev
             i(aria-hidden="true").fa.fa-angle-left
           a(href="#").slider__arrow.slider__arrow-next
             i(aria-hidden="true").fa.fa-angle-right
-      .header__nav
-        include ../common/_menu
+    .header__nav
+      include ../common/_menu
+    include ../common/_widget-lang

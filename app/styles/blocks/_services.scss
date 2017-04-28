@@ -13,7 +13,7 @@
 	color: $accent;
 }
 .services__tabs {
-	padding: 0 8.4%; //97
+	padding: 0 inter(97, 1140); //97\1140
 	.services__tabs-btn {
 		@extend %ul-reset;
 		border: 0;
@@ -57,7 +57,7 @@
 	}
 }
 .services__tabs .nav-tabs .services__tab-item.active {
-	transition: .35s;
+	transition: .3s;
 	.services__tab-link {
 		color: $accent;
 		background-color: transparent;
@@ -68,7 +68,6 @@
 	}
 }
 .services__tab-content {
-	// min-height: 600px;
 	font-size: 14px;
 	line-height: 22px;
 	font-family: $openSansRegular;
@@ -105,11 +104,11 @@
 }
 .services__feat-item {
 	max-width: 165px;
-	// margin-right: 30px;
-	margin-right: 3.15%; //30
-	// padding: 0 35px;
+	width: inter(165, 945);
+	margin-right: inter(30, 945); //30\945
 	margin-bottom: 60px;
 	text-align: center;
+	transition: .25s;
 	&:nth-child(5n-5) {
 		margin-right: 0;
 	}
@@ -149,7 +148,7 @@
 	}
 }
 .services__feat-caption {
-	padding: 0 30px;
+	padding: 0 10px;
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: 600;
