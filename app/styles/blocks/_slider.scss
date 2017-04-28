@@ -145,5 +145,26 @@
 
 }
 @media screen and #{($phone-point-widths-des)} {
-
+	.slider__promo {
+		max-width: 100%;
+	}
+	.slider__title {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.slider__text {
+		max-width: 100%;
+		margin: 0 auto 25px;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.slider__btn {
+		// 185 42
+		height: 52px;
+		padding: 0 21px;
+		line-height: 52px;
+	}
+	.slider__arrow  {
+		display: none;
+	}
 }

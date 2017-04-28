@@ -168,11 +168,11 @@
   }
   @media screen and #{($tablet-point-widths-des)} {
     max-width: $tablet-max-widths;
-    padding: 0 2.5%;
+    padding: 0 1.5%;
   }
   @media screen and #{($phone-point-widths-des)} {
     max-width: $phone-max-widths;
-    padding: 0 2%;
+    padding: 0;
   }
 }
 //стрелка

@@ -39,6 +39,7 @@ $bg-6: #959595;
 
 
 $bg-image-1: linear-gradient(270deg, #9229a3 0%, #ff6400 100%);
+$bg-image-1-hover: linear-gradient(270deg, darken(#9229a3, 7%) 0%, darken(#ff6400, 7%) 100%);
 $bg-image-2: linear-gradient(to right, #ff003c 0%, #9229a3 100%);
 $bg-image-2-hover: linear-gradient(to right, darken(#ff003c, 20%) 0%, darken(#9229a3, 20%) 100%);
 $bg-image-3: linear-gradient(270deg, #ff6000 0%, #ff7e00 100%);
@@ -72,7 +73,7 @@ $tablet-point-widths: "(min-width: 576px)";
 //Desktop//
 $desktop-point-widths-des: "(max-width: 1200px)";
 $laptop-point-widths-des: "(max-width: 992px)";
-$tablet-point-widths-des: "(max-width: 768px)";
+$tablet-point-widths-des: "(max-width: 814px)";
 $phone-point-widths-des: "(max-width: 576px)";
 
 //макс-ширина на устройствах//

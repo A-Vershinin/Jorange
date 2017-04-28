@@ -19,16 +19,31 @@ document.addEventListener("DOMContentLoaded", function() {
       var action = $(".header__action");
       menuHam.on("click", function(e) {
         menuHam.toggleClass("is-active");
+        // menuHam.toggleClass("hamburger--collapse");
         // menu.toggleClass("menu__list--mobile");
         // menu.slideToggle();
-        // action.toggleClass("header__action--mobile");
+      });
+    }
+    headerFix();
+    function headerFix() {
+      var wrap = $(".wrapper");
+      var header = $(".header__nav");
+      wrap.on("scroll", function(e) {
+        if (this.scrollTop > 845) {
+          header.addClass("header__nav--fixed");
+        } else {
+          header.removeClass("header__nav--fixed");
+        }
+        if (this.scrollTop < 768) {
+          header.removeClass("header__nav--fixed");
+        }
       });
     }
 
-    var overlay = document.querySelector(".overlay");
     popupCallback();
     function popupCallback() {
       var error = document.querySelector(".error"),
+          overlay = document.querySelector(".overlay"),
           callBtn = document.querySelector(".header__do-btn"),
           callPopup = document.querySelector(".popup__callback"),
           callClose = callPopup.querySelector(".popup__callback-close"),
@@ -66,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.keyCode === 27) {
           if (callPopup.classList.contains("popup__callback--show")) {
             callPopup.classList.remove("popup__callback--show");
-            overlay.classList.remove("popup__callback--show");
-            popup.classList.remove("error");
+            overlay.classList.remove("overlay--show");
+            callPopup.classList.remove("error");
           }
         }
       });
@@ -109,7 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
         nav: true,
         navigation: true,
         dots: false,
-        autoplay: true,
+        // autoplay: true,
+        autoHeight: true,
         autoplayHoverPause: true,
         autoplaySpeed: 1500,
         autoplayTimeout: 5000,
@@ -124,8 +140,10 @@ document.addEventListener("DOMContentLoaded", function() {
           0: {
             items: 1,
             nav: false
+            // navigation: false,
+            // dots: true
           },
-          650: {
+          576: {
             items: 1,
             nav: false
           },
@@ -163,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
         navigation: true,
         dots: false,
         autoplay: true,
+        autoHeight: true,
         autoplayHoverPause: true,
         autoplaySpeed: 2500,
         autoplayTimeout: 5000,

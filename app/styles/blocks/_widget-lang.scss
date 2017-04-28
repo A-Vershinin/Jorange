@@ -1,6 +1,6 @@
 .widget-lang {
 	position: fixed;
-	z-index: 100;
+	z-index: 50;
 	right: 19px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -8,6 +8,7 @@
 	width: 84px;
 	height: 130px;
 	background-color: $bg-1;
+	transition: .35s;
 }
 .widget-lang-list {
 	@extend %ul-reset;
@@ -54,4 +55,18 @@
 	margin-right: 8px;
 	border: 2px solid #e1e1e1;
 	border-radius: 50%;
+}
+
+@media screen and #{($laptop-point-widths-des)} {
+}
+
+@media screen and #{($tablet-point-widths-des)} {
+	.widget-lang {
+		top: 18%;
+	}
+}
+@media screen and #{($phone-point-widths-des)} {
+ .widget-lang {
+	 display: none;
+ }
 }
