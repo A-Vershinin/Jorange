@@ -25,5 +25,12 @@
   &:active {
     color: $light-1;
     background-color: $accent-active;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  &:focus {
+    outline: none;
   }
 }

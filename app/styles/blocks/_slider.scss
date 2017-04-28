@@ -74,6 +74,14 @@
 		background-color: $accent-active;
 		background-image: $bg-image-3-hover;
 	}
+	&:active {
+		color: $light-1;
+		background-color: $accent-active;
+	}
+	&:focus {
+		color: inherit;
+		outline: none;
+	}
 }
 .slider__arrows {
 	height: 60px;

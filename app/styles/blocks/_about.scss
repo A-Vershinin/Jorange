@@ -111,19 +111,34 @@
 	background-image: $bg-image-3;
 	border-radius: 26px;
 	box-shadow: 0 5px 5.6px 0.4px rgba(168, 71, 0, 0.15);
-	&:hover, &:active {
+	&:hover {
 		background-color: $accent-active;
 		background-image: $bg-image-3-hover;
+	}
+	&:active {
+		color: $light-1;
+		background-color: $accent-active;
+	}
+	&:focus {
+		color: $light-1;
+		outline: none;
 	}
 	&--transparent {
 		color: $gray-1;
 		background-color: transparent;
 		background-image: none;
 		box-shadow: none;
-		&:hover, &:active {
-			color: $gray-1;
-			background-color: transparent;
+		&:hover {
+			color: $light-1;
+			background-color: $accent;
 			background-image: none;
+		}
+		&:active {
+			color: $light-1;
+			background-color: $accent;
+		}
+		&:focus {
+			color: $gray-1;
 		}
 	}
 }

@@ -1,0 +1,134 @@
+.popup__callback,
+.popup__succes {
+	position: fixed;
+	z-index: 120;
+	// top: 0;
+	top: 168px;
+	left: 50%;
+	margin-left: calc(-555px/2);
+	width: 555px;
+	padding: 60px 97px;
+	text-align: center;
+	background-color: $bg-1;
+	background-image: linear-gradient(to top, whitesmoke 0%, white 100%);
+	display: none;
+}
+.popup__callback-close,
+.popup__succes-close {
+	position: absolute;
+  top: 33px;
+  right: 33px;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+	&::before, &::after {
+		content: "";
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    width: 24px;
+    height: 3px;
+    background-color: $light-3;
+    border-radius: 1px;
+	}
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+	&:hover {
+		&::before, &::after {
+			background-color: darken($light-3, 20%);
+		}
+	}
+}
+.popup__callback-title,
+.popup__succes-title {
+	margin-bottom: 15px;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: $openSansBold;
+	color: $accent;
+}
+.popup__callback-text,
+.popup__succes-text {
+	margin-bottom: 37px;
+	color: $gray-3;
+	font-size: 14px;
+	font-family: $openSansRegular;
+	font-weight: 400;
+}
+.callback__form {
+	width: 100%;
+	padding: 0;
+	margin: auto;
+}
+.contacts__form-block {
+	.callback__form-group {}
+	.callback__form-input,
+	.callback__form-textarea {
+		background-color: transparent;
+	}
+	.callback__form-textarea {
+		height: 128px;
+		margin-bottom: 36px;
+	}
+}
+.callback-form__btn {
+	&:focus {
+		color: $light-1;
+	}
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-160px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.popup__callback--show,
+.popup__succes--show {
+	display: block;
+	animation: bounce .6s;
+}
+
+.popup__succes {
+	// display: block;
+	top: 166px;
+	padding: 60px 60px 60px 65px;
+}
+.popup__succes-text {
+	margin-bottom: 30px;
+}
+.popup__succes-btn {
+	height: 52px;
+	padding: 0 36px;
+	font-size: 20px;
+	line-height: 52px;
+	font-weight: 700;
+	font-family: $openSansBold;
+	text-transform: none;
+	color: $light-1;
+	background-color: $accent;
+	background-image: $bg-image-3;
+	border-radius: 26px;
+	box-shadow: 0 5px 5.6px 0.4px rgba(168, 71, 0, 0.15);
+	& .fa {
+		margin-right: 10px;
+	}
+	&:hover {
+		background-image: $bg-image-3-hover;
+	}
+}

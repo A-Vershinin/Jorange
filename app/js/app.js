@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // console.log(document.documentElement);
     }
 
-
-
-
     toggleMenu();
     function toggleMenu() {
       var menuHam = $(".menu__hamburger");
@@ -27,9 +24,84 @@ document.addEventListener("DOMContentLoaded", function() {
         // action.toggleClass("header__action--mobile");
       });
     }
+
+    var overlay = document.querySelector(".overlay");
+    popupCallback();
+    function popupCallback() {
+      var error = document.querySelector(".error"),
+          callBtn = document.querySelector(".header__do-btn"),
+          callPopup = document.querySelector(".popup__callback"),
+          callClose = callPopup.querySelector(".popup__callback-close"),
+          form = callPopup.querySelector("#callback__form"),
+          nameUser = callPopup.querySelector("[name=name]"),
+          phoneUser = callPopup.querySelector("[name=phone]"),
+          messageUser = callPopup.querySelector("[name=message]"),
+          storage = localStorage.getItem("loginUser");
+
+      callBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        callPopup.classList.add("popup__callback--show");
+        overlay.classList.add("overlay--show");
+        nameUser.focus();
+        if (storage) {
+          nameUser.value = storage;
+          phoneUser.focus();
+        } else {
+          nameUser.focus();
+        }
+        if (storage) {
+          phoneUser.value = storage;
+          messageUser.focus();
+        } else {
+          phoneUser.focus();
+        }
+      })
+      callClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        callPopup.classList.remove("popup__callback--show");
+        overlay.classList.remove("overlay--show");
+        callPopup.classList.remove("error");
+      });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (callPopup.classList.contains("popup__callback--show")) {
+            callPopup.classList.remove("popup__callback--show");
+            overlay.classList.remove("popup__callback--show");
+            popup.classList.remove("error");
+          }
+        }
+      });
+      form.addEventListener("submit", function(event) {
+        if (!nameUser.value || !phoneUser.value || !messageUser.value) {
+          event.preventDefault();
+          // callPopup.classList.remove("error");
+          // callPopup.offsetWidth = callPopup.offsetWidth;
+          // callPopup.classList.add("error");
+        } else {
+          localStorage.setItem("Name", nameUser.value);
+          localStorage.setItem("Phone", phoneUser.value);
+          localStorage.setItem("Message", messageUser.value);
+        }
+      });
+    }
+    popupSucces();
+    function popupSucces() {
+      var succesBtn = document.querySelector(".contact-form__btn"),
+      succesPopup = document.querySelector(".popup__succes"),
+      succesPopupClose = succesPopup.querySelector(".popup__succes-close");
+
+      succesBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        succesPopup.classList.add("popup__callback--show");
+      });
+      succesPopup.addEventListener("click", function(event) {
+        event.preventDefault();
+        succesPopup.classList.remove("popup__callback--show");
+      });
+    }
     headerSlider();
     function headerSlider() {
-      var carousel = $('.slider').owlCarousel({
+      var carousel = $(".slider").owlCarousel({
         items: 1,
         loop: true,
         center: true,
@@ -71,19 +143,19 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
       });
-      $('.slider__arrow-prev').click(function(e) {
+      $(".slider__arrow-prev").click(function(e) {
         e.preventDefault();
-        carousel.trigger('prev.owl.carousel');
+        carousel.trigger("prev.owl.carousel");
       });
 
-      $('.slider__arrow-next').click(function(e) {
+      $(".slider__arrow-next").click(function(e) {
         e.preventDefault();
-        carousel.trigger('next.owl.carousel');
+        carousel.trigger("next.owl.carousel");
       });
     }
     workSlider();
     function workSlider() {
-      var carousel = $('.work__slide-list').owlCarousel({
+      var carousel = $(".work__slide-list").owlCarousel({
         items: 1,
         loop: true,
         margin: 0,
@@ -101,8 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
         navigationText : ["",""],
         responsiveClass: true,
         navText: "",
-        animateOut: 'slideOutDown',
-        animateIn: 'fadeInDown',
+        animateOut: "slideOutDown",
+        animateIn: "fadeInDown",
         responsive:{
           0: {
             items: 1,
@@ -126,20 +198,20 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
       });
-      $('.work__slide-arrow--prev').click(function(e) {
+      $(".work__slide-arrow--prev").click(function(e) {
         e.preventDefault();
-        carousel.trigger('prev.owl.carousel');
+        carousel.trigger("prev.owl.carousel");
       });
 
-      $('.work__slide-arrow--next').click(function(e) {
+      $(".work__slide-arrow--next").click(function(e) {
         e.preventDefault();
-        carousel.trigger('next.owl.carousel');
+        carousel.trigger("next.owl.carousel");
       });
     }
 
     feedbacklider();
     function feedbacklider() {
-      var carousel = $('.feedback__slide-list').owlCarousel({
+      var carousel = $(".feedback__slide-list").owlCarousel({
         items: 1,
         loop: true,
         margin: 0,
@@ -157,8 +229,8 @@ document.addEventListener("DOMContentLoaded", function() {
         navigationText : ["",""],
         responsiveClass: true,
         navText: "",
-        animateOut: 'slideOutDown',
-        animateIn: 'fadeInDown',
+        animateOut: "slideOutDown",
+        animateIn: "fadeInDown",
         itemsDesktop: [
             1200, 3
         ],
@@ -172,40 +244,40 @@ document.addEventListener("DOMContentLoaded", function() {
             576, 1
         ],
       });
-      $('.feedback__slide-arrow--prev').click(function(e) {
+      $(".feedback__slide-arrow--prev").click(function(e) {
         e.preventDefault();
-        carousel.trigger('prev.owl.carousel');
+        carousel.trigger("prev.owl.carousel");
       });
 
-      $('.feedback__slide-arrow--next').click(function(e) {
+      $(".feedback__slide-arrow--next").click(function(e) {
         e.preventDefault();
-        carousel.trigger('next.owl.carousel');
+        carousel.trigger("next.owl.carousel");
       });
     }
 
     selectForm();
     function selectForm() {
-      $('.select').on('click','.select__title',function() {
-        var parent = $(this).closest('.select');
-        if (!parent.hasClass('is-open')) {
-          parent.addClass('is-open');
-          $('.select.is-open').not(parent).removeClass('is-open');
+      $(".select").on("click",".select__title",function() {
+        var parent = $(this).closest(".select");
+        if (!parent.hasClass("is-open")) {
+          parent.addClass("is-open");
+          $(".select.is-open").not(parent).removeClass("is-open");
         }else {
-          parent.removeClass('is-open');
+          parent.removeClass("is-open");
         }
-      }).on('click','ul>li',function() {
-        var parent = $(this).closest('.select');
-        parent.removeClass('is-open').find('.select__title').text($(this).text());
-        parent.find('input[type=hidden]').attr('value', $(this).attr('data-value'));
+      }).on("click","ul>li",function() {
+        var parent = $(this).closest(".select");
+        parent.removeClass("is-open").find(".select__title").text($(this).text());
+        parent.find("input[type=hidden]").attr("value", $(this).attr("data-value"));
       });
     }
     //inputFile
     inputFile();
     function inputFile() {
-      $('#file-field').change(function() {
-      if ($(this).val() != '') $(this).prev()
-        .text('Выбрано файлов: ' + $(this)[0].files.length);
-      else $(this).prev().text('Выберите файлы');
+      $("#file-field").change(function() {
+      if ($(this).val() != "") $(this).prev()
+        .text("Выбрано файлов: " + $(this)[0].files.length);
+      else $(this).prev().text("Выберите файлы");
       });
 
     }

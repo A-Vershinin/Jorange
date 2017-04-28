@@ -1,0 +1,27 @@
+.popup
+	.popup__callback
+		button(type="button" title="Закрыть").popup__callback-close Закрыть
+		h3.popup__callback-title Обратный звонок
+		.popup__callback-text Заполните форму и мы Вам перезвоним!
+		form.contacts__form.callback__form#callback__form
+			.contacts__form-block
+				.contacts__form-group.callback__form-group
+					input(type="text" name="name" placeholder="Ваше имя*"
+						value="" required).contacts__form-input.callback__form-input#name-field
+					label(for="name-field") Имя
+				.contacts__form-group.callback__form-group
+					input(type="text" name="phone" placeholder="Контактный телефон*"
+						value="" required).contacts__form-input#phone-field
+					label(for="name-field") Контактный телефон
+				.contacts__form-group.callback__form-group
+					textarea(type="text" name="message" placeholder="Комментарий*"
+						value="" required).contacts__form-textarea.callback__form-textarea#textarea-field
+					label(for="select-field") Комментарий
+				button(type="submit").btn.contact-form__btn.callback-form__btn Отправить
+	.popup__succes
+		button(type="button" title="Закрыть").popup__succes-close Закрыть
+		h3.popup__succes-title Спасибо!
+		.popup__succes-text Ваш запрос был успешно отправлен! Пожалуйста, ожидайте - мы свяжемся с Вами в ближайшее время.
+		a(href="#").btn.popup__succes-btn
+			i(aria-hidden="true").fa.fa-check-circle
+			|Продолжить
