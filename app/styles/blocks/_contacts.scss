@@ -280,20 +280,27 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media screen and #{($laptop-point-widths-des)}{
+
+
 
 }
 @media screen and #{($tablet-point-widths-des)} {
+	// .contacts__ways {
+	// 	margin-left: auto;
+	// }
+	.contacts__time {
+		max-width: 90%;
+	}
+	.contacts__ways-item {
+		margin-bottom: 20px;
+	}
+
+
 
 }
 @media screen and #{($phone-point-widths-des)} {
+
+
 
 }

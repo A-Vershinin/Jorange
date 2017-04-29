@@ -18,10 +18,10 @@ module.exports = function() {
         noCache: true,
         outputStyle: 'expanded'
       }))
-      .pipe($.gp.cssunit({
-        type :'px-to-rem',
-      	rootSize : 16
-      }))
+      // .pipe($.gp.cssunit({
+      //   type :'px-to-rem',
+      // 	rootSize : 16
+      // }))
       .pipe($.gp.autoprefixer({
         browsers: $.config.autoprefixerConfig
       }))
@@ -34,7 +34,7 @@ module.exports = function() {
       .pipe($.gp.sourcemaps.write())
       .pipe($.gulp.dest($.config.root + '/css'))
       .pipe($.gp.csso())
-      // .pipe($.gp.rename({suffix: '.min'}))
+      .pipe($.gp.rename({suffix: '.min'}))
       .pipe($.gulp.dest($.config.root + '/css'))
       .pipe($.browserSync.stream());
   })

@@ -110,7 +110,7 @@
     }
     & .menu__hamburger {
       display: inline-block;
-      margin-right: inter(20, 576);
+      margin-right: 20px;
     }
     & .menu__list {
       display: block;
@@ -153,11 +153,18 @@
 @media screen and #{($phone-point-widths-des)} {
   .menu__hamburger {
     position: absolute;
-    top: -85px;
+    top: -75px;
     right: 0;
   }
-  .menu__list {
-    background-color: $bg-1;
+  .menu {
+    & .menu__list {
+      background-color: $bg-1;
+    }
+  }
+   .menu__hamburger {
+    display: inline-block;
+    margin-right: 0;
+    padding: 10px 5px;
   }
   .hamburger-box {
     width: 44px;

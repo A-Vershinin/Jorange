@@ -151,6 +151,7 @@
     padding: 0 20px;
   }
   @media screen and #{($phone-point-widths-des)} {
+    min-width: 320px;
     width: $phone-inner-widths; //300
     padding: 0 10px;
   }

@@ -210,10 +210,16 @@
       }
     }
   }
+  .header__do-btn  {
+    // height: 36px;
+    // margin-top: 14px;
+    padding: 0 16px;
+    // line-height: 36px;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
   .header__top {
-    height: 100px;
+    height: 80px;
   }
   .header__top-inner {
     display: block;
@@ -221,14 +227,13 @@
     font-size: 0;
   }
   .header__logo {
-    max-width: 147px;
+    max-width: 112px;
     padding-left: 16px;
-    margin-right: 24px;
     display: inline-block;
     vertical-align: middle;
     & .logo__link {
-      width: 108px;
-      height: 55px;
+      width: 88px;
+      height: 45px;
     }
     .header__logo-slogan {
       font-size: 8px;
@@ -243,26 +248,25 @@
   .header__tell {
     display: none;
   }
+  .header__actions {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-right: 80px;
+  }
   .header__do-btn  {
     height: 36px;
-    margin-top: 14px;
-    padding: 0 18px;
+    margin-top: 6px;
+    padding: 0 16px;
     line-height: 36px;
+    font-size: 14px;
     & span {
       display: none;
     }
   }
-  .header__actions {
-    width: 120px;
-    display: inline-block;
-    vertical-align: middle;
-    float: right;
-    margin-right: 108px;
-  }
   .header__nav {
     position: absolute;
-    top: 100px;
-    // top: 20px;
+    top: 80px;
     right: 0;
     left: 0;
   }

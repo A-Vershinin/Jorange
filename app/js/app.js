@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
     }
+
     popupSucces();
     function popupSucces() {
       var succesBtn = document.querySelector(".contact-form__btn"),
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
         succesPopup.classList.remove("popup__callback--show");
       });
     }
+
     headerSlider();
     function headerSlider() {
       var carousel = $(".slider").owlCarousel({
@@ -122,9 +124,9 @@ document.addEventListener("DOMContentLoaded", function() {
         center: true,
         margin: 10,
         nav: true,
-        navigation: true,
+        // navigation: true,
         dots: false,
-        // autoplay: true,
+        autoplay: true,
         autoHeight: true,
         autoplayHoverPause: true,
         autoplaySpeed: 1500,
@@ -135,29 +137,36 @@ document.addEventListener("DOMContentLoaded", function() {
         lazyLoad: true,
         navigationText : ["",""],
         responsiveClass: true,
+        navContainerClass: "slider__arrows",
+        // dotsClass: "slider__dots",
+        // dotClass: "slider__dot",
         navText: "",
         responsive:{
           0: {
             items: 1,
-            nav: false
-            // navigation: false,
-            // dots: true
+            nav: false,
+            dots: true
           },
           576: {
             items: 1,
-            nav: false
+            nav: false,
+            dotsEach: true,
+            dots: true
           },
-          768: {
+          814: {
             items: 1,
-            nav: true
+            nav: true,
+            dots: false
           },
           992: {
             items: 1,
-            nav: true
+            nav: true,
+            dots: false
           },
           1200: {
             items: 1,
-            nav: true
+            nav: true,
+            dots: false
           }
         }
       });
@@ -196,24 +205,19 @@ document.addEventListener("DOMContentLoaded", function() {
         animateIn: "fadeInDown",
         responsive:{
           0: {
-            items: 1,
-            nav: false
+            items: 1
           },
-          650: {
-            items: 1,
-            nav: false
+          576: {
+            items: 1
           },
-          768: {
-            items: 1,
-            nav: true
+          814: {
+            items: 1
           },
           992: {
-            items: 1,
-            nav: true
+            items: 1
           },
           1200: {
-            items: 1,
-            nav: true
+            items: 1
           }
         }
       });
@@ -250,18 +254,30 @@ document.addEventListener("DOMContentLoaded", function() {
         navText: "",
         animateOut: "slideOutDown",
         animateIn: "fadeInDown",
-        itemsDesktop: [
-            1200, 3
-        ],
-        itemsDesktopSmall: [
-            992, 1
-        ],
-        itemsTablet: [
-            768, 1
-        ],
-        itemsMobile: [
-            576, 1
-        ],
+        responsive:{
+          0: {
+            items: 1,
+            dots: true,
+            nav: false
+          },
+          576: {
+            items: 1,
+            dots: true,
+            nav: false
+          },
+          814: {
+            items: 1,
+            nav: true
+          },
+          992: {
+            items: 1,
+            nav: true
+          },
+          1200: {
+            items: 1,
+            nav: true
+          }
+        }
       });
       $(".feedback__slide-arrow--prev").click(function(e) {
         e.preventDefault();

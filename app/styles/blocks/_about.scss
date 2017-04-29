@@ -42,6 +42,7 @@
 	@extend %cover;
 	background-size: contain;
 	background-position: 50%;
+	transition: .35s;
 	@media #{$retina} {
 		background-image: url("../img/content/about1@2x.png");
 		background-size: contain;
@@ -128,6 +129,7 @@
 		background-color: transparent;
 		background-image: none;
 		box-shadow: none;
+		border-color: transparent;
 		&:hover {
 			color: $light-1;
 			background-color: $accent;
@@ -176,11 +178,75 @@
 
 
 @media screen and #{($laptop-point-widths-des)}{
-
+	.about__btn {
+		display: block;
+		margin-bottom: 25px;
+	}
+	.about__top-right {
+		top: -5%;
+	}
+	.about__countre-item {
+		margin-bottom: 10px;
+	}
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+	.about__top {
+		min-height: 100%;
+	}
+	.about__top-left {
+		float: none;
+		width: 100%;
+		padding: 40px;
+	}
+	.about__top-right {
+		display: none;
+	}
+	.about__top {
+		background-color: transparent;
+	}
 }
 @media screen and #{($phone-point-widths-des)} {
-
+	.about {
+		padding-top: 60px;
+	}
+	.about__top {
+		margin-bottom: 54px;
+		box-shadow: none;
+	}
+	.about__top-left {
+		padding: 0 16px;
+	}
+	.about__title {
+		margin-bottom: 40px;
+		font-size: 24px;
+	}
+	.about__text {
+		margin-bottom: 28px;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.about__countres-title {
+		margin-bottom: 17px;
+	}
+	.about__countres {
+		margin-bottom: 41px;
+	}
+	.about__btn {
+		max-width: 196px;
+		margin: 0 auto 25px;
+		border-color: transparent;
+		&:last-child {
+			max-width: 100%;
+			border: none;
+			&:hover, &:active, &:focus {
+				color: $gray-1;
+				border: 0;
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+	}
+	.about__features {
+		display: none;
+	}
 }

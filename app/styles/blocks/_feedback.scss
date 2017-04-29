@@ -1,5 +1,4 @@
 .feedback {
-	padding-top: 74px;
 	background-color: $bg-2;
 	text-align: center;
 	margin-bottom: 130px;
@@ -153,13 +152,77 @@
 		color: inherit;
 	}
 }
-
+.feedback__slider {
+	& .owl-dots {
+		position: absolute;
+		z-index: 30;
+		bottom: 34px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	& .owl-dot {
+		display: inline-block;
+		vertical-align: middle;
+		width: 12px;
+		height: 12px;
+		margin-right: 13px;
+		border: 2px solid rgba(0, 0, 0, 0.3);
+		border-radius: 50%;
+		background-color: transparent;
+	}
+	& .owl-dot.active {
+		width: 16px;
+		height: 16px;
+		background-color: $accent;
+		border-color: transparent;
+	}
+}
 @media screen and #{($laptop-point-widths-des)}{
 
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+	.feedback__slide-item-left {
+		width: 100%;
+		padding: 63px 97px;
+	}
+	.feedback__slide-item-image {
+		display: none;
+	}
+	.feedback__slide-item-number {
+		right: 10%;
+	}
 }
 @media screen and #{($phone-point-widths-des)} {
-
+	.feedback {
+		border-bottom: 2px solid #d9d9d9;
+	}
+	.feedback__title {
+		padding-top: 37px;
+		margin-bottom: 42px;
+		font-size: 24px;
+	}
+	.feedback__slide-item-left {
+		min-height: 100%;
+		padding: 47px 26px;
+	}
+	.feedback__slide-item-text {
+		margin-bottom: 40px;
+	}
+	.feedback__slide-list.owl-carousel .owl-stage-outer {
+		box-shadow: none;
+	}
+	.feedback__slide-item-number {
+		right: 5%;
+		bottom: 45px;
+		top: auto;
+	}
+	.feedback__slide-arrows {
+		bottom: 40px;
+		left: 20px;
+	}
+	.feedback__slider {
+		& .owl-dots {
+			bottom: -70px;
+		}
+	}
 }

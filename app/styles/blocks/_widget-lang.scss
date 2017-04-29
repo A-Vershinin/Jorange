@@ -62,11 +62,9 @@
 
 @media screen and #{($tablet-point-widths-des)} {
 	.widget-lang {
-		top: 18%;
+		display: none;
 	}
 }
 @media screen and #{($phone-point-widths-des)} {
- .widget-lang {
-	 display: none;
- }
+
 }
