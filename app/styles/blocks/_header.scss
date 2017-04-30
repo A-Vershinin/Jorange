@@ -210,11 +210,8 @@
       }
     }
   }
-  .header__do-btn  {
-    // height: 36px;
-    // margin-top: 14px;
+  .header__actions .header__do-btn  {
     padding: 0 16px;
-    // line-height: 36px;
   }
 }
 @media screen and #{($phone-point-widths-des)} {
@@ -254,15 +251,18 @@
     float: right;
     margin-right: 80px;
   }
-  .header__do-btn  {
-    height: 36px;
-    margin-top: 6px;
-    padding: 0 16px;
-    line-height: 36px;
-    font-size: 14px;
-    & span {
-      display: none;
+  .header__actions {
+    .header__do-btn  {
+      height: 36px;
+      margin-top: 12px;
+      padding: 0 16px;
+      line-height: 36px;
+      font-size: 14px;
+      & span {
+        display: none;
+      }
     }
+
   }
   .header__nav {
     position: absolute;
@@ -270,6 +270,4 @@
     right: 0;
     left: 0;
   }
-}
-@media screen and (max-width: 480px) {
 }

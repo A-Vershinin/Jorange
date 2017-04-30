@@ -16,9 +16,12 @@ section.contacts
 					h5.contacts__ways-item-title
 						i(aria-hidden="true").fa.fa-envelope
 						|Електронная почта:
-					a(href="mailto:zakaz@gmail.com").contacts__ways-link zakaz@gmail.com (для заказов)
-					a(href="mailto:perevod@gmail.com").contacts__ways-link perevod@gmail.com (для резюме)
-					a(href="mailto:ol@mail.ru").contacts__ways-link ol@mail.ru (для общих вопросов)
+					a(href="mailto:zakaz@gmail.com").contacts__ways-link zakaz@gmail.com
+						span (для заказов)
+					a(href="mailto:perevod@gmail.com").contacts__ways-link perevod@gmail.com
+						span (для резюме)
+					a(href="mailto:ol@mail.ru").contacts__ways-link ol@mail.ru
+						span (для общих вопросов)
 				li.contacts__ways-item
 					h5.contacts__ways-item-title
 						i(aria-hidden="true").fa.fa-skype
@@ -91,3 +94,6 @@ section.contacts
 					input(type="file" name="file"
 						multiple).contacts__form-input.contacts__form-input-file#file-field
 				button(type="submit" tabindex="4").btn.contact-form__btn Отправить
+		a(href="#").btn.contacts__btn-order
+			i(aria-hidden="true").fa.fa-plus-circle
+			|Заказать перевод

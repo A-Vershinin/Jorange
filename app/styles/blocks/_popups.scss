@@ -2,16 +2,15 @@
 .popup__succes {
 	position: fixed;
 	z-index: 120;
-	// top: 0;
 	top: 168px;
-	left: 50%;
-	margin-left: calc(-555px/2);
-	width: 555px;
-	padding: 60px 97px;
+	margin-left: calc(48%/2);
+	width: 48%; //555
+	padding: 60px 8%; // 60 97
 	text-align: center;
 	background-color: $bg-1;
 	background-image: linear-gradient(to top, whitesmoke 0%, white 100%);
 	display: none;
+	transition: .35s;
 }
 .popup__callback-close,
 .popup__succes-close {
@@ -130,5 +129,33 @@
 	}
 	&:hover {
 		background-image: $bg-image-3-hover;
+	}
+}
+
+
+
+
+@media screen and #{($laptop-point-widths-des)} {
+	.popup__callback,
+	.popup__succes {
+		width: 65%;
+		margin-left: calc(35%/2);
+	}
+}
+@media screen and #{($tablet-point-widths-des)} {
+	.popup__callback,
+	.popup__succes {
+		width: 75%;
+		margin-left: calc(25%/2);
+	}
+}
+@media screen and #{($phone-point-widths-des)} {
+	.popup__callback,
+	.popup__succes {
+		width: 85%;
+		margin-left: calc(15%/2);
+	}
+	.callback__form {
+		display: block;
 	}
 }

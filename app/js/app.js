@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
       var action = $(".header__action");
       menuHam.on("click", function(e) {
         menuHam.toggleClass("is-active");
-        // menuHam.toggleClass("hamburger--collapse");
-        // menu.toggleClass("menu__list--mobile");
-        // menu.slideToggle();
       });
     }
     headerFix();
@@ -36,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         if (this.scrollTop < 768) {
           header.removeClass("header__nav--fixed");
+        }
+      });
+      $(window).on("resize", function(e) {
+        if ($(window).outerWidth() > 800 && $(window).outerWidth() < 816) {
+          console.log("111");
+          $(".collapse.navbar-collapse").css("display", "");
         }
       });
     }
@@ -138,8 +141,6 @@ document.addEventListener("DOMContentLoaded", function() {
         navigationText : ["",""],
         responsiveClass: true,
         navContainerClass: "slider__arrows",
-        // dotsClass: "slider__dots",
-        // dotClass: "slider__dot",
         navText: "",
         responsive:{
           0: {
